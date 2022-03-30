@@ -22,3 +22,18 @@ li a:hover {
 li a.active {
   background-color: #00FF66;
 }
+
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+
+
+button{
+  float: right;
+  background-color: #383838;
+}
