@@ -1,26 +1,83 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <link rel = "stylesheet"
-      type = "text/css"
-      href = "style.css" />
-  </head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
 <body>
+ 
 
-<h1>
-  Goal 4 and 5
-</h1>   
+<div class="header">
+  <button type="submit""><img src="tinysearch.png"><i class="fa fa-search"></i></button>
+  <div class="search_box">
+    <input type="text" placeholder="Search.." style="float: right;">  
+  </div>   
+  <button onClick="dark_toggle()">
+
+  </button>
+  <h1>__________. UN SDGs 4 and 5</h1>
+  
+</div>
 
 
-<button type="submit"><img src="tinysearch.png"><i class="fa fa-search"></i></button>
-<input type="text" placeholder="Search.." style="float: right;">
 
-<ul>
-  <li><a class="active" href="index.html">Home</a></li>
-  <li><a href="goal4.html">Goal 4</a></li>
-  <li><a href="goal5.html">Goal 5</a></li>
-  <li><a href="donate.html">Donate</a></li>
-</ul>
+  <div class="sidenav">
+    <a href="index.html">Home</a>
+    <button class="dropdown-btn">Goal 4 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="goal4.html">What is Goal 4?</a>
+      <a href="goal4_2.html">Graphs and Data</a>
+    </div>
+    <button class="dropdown-btn">Goal 5
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="goal5.html">What is Goal 5?</a>
+      <a href="goal5_2.html">Graphs and Data</a>
+    </div>
+    <a href="donate.html">Donate</a>
+  </div>
+  
+  <div class="main">
+   
+  </div>
+  
+  <div class="text_blob_1">
+    <p class="solid">
+      Lots of text which is very important. 
+    </p>
+  </div>
+
+  <script>
+  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+  </script>
+
+  <script>
+    function dark_toggle(){
+    var element = document.body;
+    element.classList.toggle("dark_mode");
+    var element2 = document.h1;
+    element2.classList.toggle(dark_mode_2)
+  }
+  </script>
 
 </body>
+
 </html>
