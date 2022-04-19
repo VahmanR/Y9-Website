@@ -1,26 +1,142 @@
 <!DOCTYPE html>
 <html>
+
+<!--linking to style.css to add styling to the site-->
 <head>
-  <link rel = "stylesheet"
-      type = "text/css"
-      href = "style.css" />
-  </head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="icon" type="image/x-icon" href=""/>
+</head>
+
 <body>
 
-<h1>
-  Goal 4 and 5
-</h1>   
+<!--making the header for the website, with title, search bar-->
+<div class="header" style="align-content: center;">
+  <button type="submit"><img src="tinysearch.png"><i class="fa fa-search"></i></button>
+  <div class="search_box">
+    <input type="text" placeholder="Search..." style="float: right; margin-bottom:10px">  
+  </div> 
+  <div class="dark_button">
+    <button onClick="dark_toggle()" style="background-color:#380955">
+      <img src="dark_toggle.jpg">
+    </button>
+  </div>
+</div>
+<h1 class="solid">UN SDGs 4 and 5</h1>
 
+<!--Making the side navigation bar for links to other pages-->
+  <div class="sidenav">
+    <a href="index.html">Home</a>
+    <button class="dropdown-btn">Goal 4 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="goal4.html">What is Goal 4?</a>
+      <a href="goal4_2.html">Graphs and Data</a>
+    </div>
+    <button class="dropdown-btn">Goal 5
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="goal5.html">What is Goal 5?</a>
+      <a href="goal5_2.html">Graphs and Data</a>
+    </div>
+    <a href="donate.html">Donate</a>
+  </div>
+  
+<!--Main body of the home page-->
+  <div class="row">
+  <h2 class="solid">
+    What are the UN SDGs?
+  </h2>
 
-<button type="submit"><img src="tinysearch.png"><i class="fa fa-search"></i></button>
-<input type="text" placeholder="Search.." style="float: right;">
+  <p class="solid">
+    The UN SDGs are a set of 17 goals made by the United Nations, with the hope that they will be acheived by 2030. The goals are 
+    meant to make the world more sustainable. This would be acheived by doing things such as reducing pollution, or giving everyone
+    access to quality education. A full list of the UN SDGs can be found here -> <a href="https://sdgs.un.org/goals">List of all UN SDGs</a>
+  </p>
+<!--Making 2 columns to put text and images-->
+  <div class="column">
+  <div class="text_blob_2">
+    <p class="dotted_right" style="font-size: small;">
+      UN SDG 4 is "Ensure inclusive and quality education for all and promote lifelong learning."
+      This goal is focused around giving every person around the world access to quality education
+      to allow them to be able to get a job which will give them financial stability. Many of the subgoals
+      focus on giving everyone access to education, an example would be making primary and secondary education 
+      free around the world. 
+      _________________________________________________________
+    <a href="goal4.html">
+      <img src="goal4.png">
+    </a>
+      
+    </p>
+  </div>
+  </div>
 
-<ul>
-  <li><a class="active" href="index.html">Home</a></li>
-  <li><a href="goal4.html">Goal 4</a></li>
-  <li><a href="goal5.html">Goal 5</a></li>
-  <li><a href="donate.html">Donate</a></li>
-</ul>
+  <div class="column">
+  <div class="text_blob_1">
+    <p class="dotted_left" style="font-size: small;">
+      UN SDG 5 is "Achieve gender equality and empower all women and girls. "
+      This would be achieved by giving all girls and women equal access to 
+      education, health care and decent work, as well as giving equal 
+      representation in political and economical decision making. This is 
+      important as gender equality is considered to be a fundemental
+      human right. Acheiving this goal would also be the fundemental basis
+      for a peaceful and prosporus world.
+      ___________________________________________________________
+      <a href="goal5.html">
+        <img src="g5.png">
+      </a>
+    </p>
+  </div>
+  </div>
+  </div>
+
+<div class="row">
+  <h2 class="solid">
+    How are these two goals related?
+  </h2>
+  <p class="solid">
+    There is a strong corelation between the education level of women and their 
+    gender equality. An example of this is that as the women started to get the
+    same education level as men, the amount of women in national parliments
+    also rose with it. 
+  </p>
+</div>
+  
+
+<!--Script for the dropdown menu in the navbar-->
+  <script>
+
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+  </script>
+
+<!--Script to make the page switch to dark mode-->
+  <script>
+    function dark_toggle(){
+    var element = document.body;
+    element.classList.toggle("dark_mode");
+  }
+  </script>
+
+  <script>
+    function search(){
+      
+    }
+  </script>
 
 </body>
+
 </html>

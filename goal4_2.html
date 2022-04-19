@@ -6,11 +6,34 @@
 </head>
 
 <body>
+ 
 
-
+<div class="header" style="align-content: center;">
 
   <button type="submit"><img src="tinysearch.png"><i class="fa fa-search"></i></button>
-  <input type="text" placeholder="Search.." style="float: right;">
+
+  <div class="search_box">
+
+    <input type="text" placeholder="Search..." style="float: right; margin-bottom:10px">  
+
+  </div> 
+
+  <div class="dark_button">
+
+    <button onClick="dark_toggle()" style="background-color:#380955">
+
+      <img src="dark_toggle.jpg">
+
+    </button>
+
+  </div>
+
+</div>
+
+<h1 class="solid">UN SDG 4</h1>
+  
+
+
 
 
   <div class="sidenav">
@@ -36,8 +59,27 @@
    
   </div>
   
+  <div class="row">
+    <iframe src="https://ourworldindata.org/grapher/gross-enrollment-ratio-in-tertiary-education?country=East+Asia+%26+Pacific~Europe+%26+Central+Asia~Latin+America+%26+Caribbean~Middle+East+%26+North+Africa~North+America~South+Asia~Sub-Saharan+Africa" loading="lazy" style="width: 500px; height: 500px; border: 0px none; float:right;"></iframe>
+    <p class="solid" style="width:700px">
+      This is a map of the enrollment rate in tertiary education in 2016. It is shown as a percentage of the total amount of people
+      who complete their secondary education. This shows that in many countries the majority of people who are able to complete their
+      secondary education, do not go to college or university. 
+    </p>
+  </div>
+
+  <div class="row">
+    <iframe src="https://ourworldindata.org/grapher/school-life-expectancy-in-secondary-education-by-sex?time=latest" loading="lazy" style="width: 500px; height: 500px; border: 0px none; float:right;"></iframe>
+    <p class="solid" style="width:700px;">
+      This is a graph showing the school life expectancy in secondary education of males compared to females. This graph is very important as it
+      is directly connected with gender equality, which can be seen in the strong corelation between both. (Use the slider!)
+    </p>
+
+  </div>
+
+
   <script>
-  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+
   var dropdown = document.getElementsByClassName("dropdown-btn");
   var i;
   
@@ -52,6 +94,19 @@
     }
     });
   }
+  </script>
+
+  <script>
+    function dark_toggle(){
+    var element = document.body;
+    element.classList.toggle("dark_mode");
+  }
+  </script>
+
+  <script>
+    function search(){
+      
+    }
   </script>
 
 </body>

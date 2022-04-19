@@ -1,27 +1,116 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <link rel = "stylesheet"
-      type = "text/css"
-      href = "style.css" />
-  </head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
 <body>
+ 
 
-<h1>
-  Goal 4 and 5
-</h1>   
+<div class="header" style="align-content: center;">
+
+  <button type="submit"><img src="tinysearch.png"><i class="fa fa-search"></i></button>
+
+  <div class="search_box">
+
+    <input type="text" placeholder="Search..." style="float: right; margin-bottom:10px">  
+
+  </div> 
+
+  <div class="dark_button">
+
+    <button onClick="dark_toggle()" style="background-color:#380955">
+
+      <img src="dark_toggle.jpg">
+
+    </button>
+
+  </div>
+
+</div>
+
+<h1 class="solid">UN SDG 5</h1>
+  
+<h2 class="solid">
+  What is Goal 5?
+</h2>
+
+<img src="5.5.png" style="float:left; margin-left:195px; margin-right:5px;">
+
+<p class="solid">
+  UN SDGs goal 5 is Acheive gender equality and empower all women and girls. In many countries around 
+  the world women are treated worse than men. Some indicators of this are the % of people in positions of 
+  power who are women. The image to the left shows the % of women in positions of power around the
+  world. In all 3 sets of data, about 70% of people in positions of power are men. To acheive gender parity,
+  the amount of men and women in the same position would need to be 50/50. This would show that the job 
+  is given equal to both genders.
+</p>
+
+<img src="goal5.png" style="float:right;">
+<p class="solid" >
+  Acheiving gender equality is very important. This is because gender equality is a fundemental human right
+  and giving everyone an equal voice in decision making would lead to a significantly more peaceful world.
+  Currently, most job positions do not meet gender parity. If a gender parity of 1 was achieved for all 
+  professions, this would show that there is much less discrimination in our societies, and it would have a 
+  massive positive impact on the lives of billions of people around the world.
+</p>
 
 
 
-<button type="submit"><img src="tinysearch.png"><i class="fa fa-search"></i></button>
-<input type="text" placeholder="Search.." style="float: right;">
+  <div class="sidenav">
+    <a href="index.html">Home</a>
+    <button class="dropdown-btn">Goal 4 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="goal4.html">What is Goal 4?</a>
+      <a href="goal4_2.html">Graphs and Data</a>
+    </div>
+    <button class="dropdown-btn">Goal 5
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="goal5.html">What is Goal 5?</a>
+      <a href="goal5_2.html">Graphs and Data</a>
+    </div>
+    <a href="donate.html">Donate</a>
+ 
+  
+    
+ 
 
-<ul>
-  <li><a class="active" href="index.html">Home</a></li>
-  <li><a href="goal4.html">Goal 4</a></li>
-  <li><a href="goal5.html">Goal 5</a></li>
-  <li><a href="donate.html">Donate</a></li>
-</ul>
+  <script>
+
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+  </script>
+
+  <script>
+    function dark_toggle(){
+    var element = document.body;
+    element.classList.toggle("dark_mode");
+  }
+  </script>
+
+  <script>
+    function search(){
+      
+    }
+  </script>
 
 </body>
+
 </html>

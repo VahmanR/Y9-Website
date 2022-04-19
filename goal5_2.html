@@ -6,11 +6,36 @@
 </head>
 
 <body>
+ 
 
 
+
+<div class="header" style="align-content: center;">
 
   <button type="submit"><img src="tinysearch.png"><i class="fa fa-search"></i></button>
-  <input type="text" placeholder="Search.." style="float: right;">
+
+  <div class="search_box">
+
+    <input type="text" placeholder="Search..." style="float: right; margin-bottom:10px">  
+
+  </div> 
+
+  <div class="dark_button">
+
+    <button onClick="dark_toggle()" style="background-color:#380955">
+
+      <img src="dark_toggle.jpg">
+
+    </button>
+
+  </div>
+
+</div>
+
+<h1 class="solid">UN SDG 5</h1>
+  
+
+
 
 
   <div class="sidenav">
@@ -36,8 +61,31 @@
    
   </div>
   
+
+
+  <div class="row">
+    <iframe src="https://ourworldindata.org/grapher/seats-held-by-women-in-national-parliaments" loading="lazy" style="width: 500px; height: 500px; border: 0px none; float:right;"></iframe>
+    <p class="solid" style="width:700px;">
+      This is a map showing the percentage of parliment seats in national parliments held by women around the world.
+      The ideal percentage would be 50% as that would show that the country reached gender parity in their parliment.
+      However most of the countries on this map have their percentage of women in parliment at less than 50%.
+    </p>
+  
+  </div>
+
+  <div class="row">
+    <iframe src="https://ourworldindata.org/grapher/share-firms-top-female-manager" loading="lazy" style="width: 500px; height: 500px; border: 0px none; margin-left:200px"></iframe>
+    <p class="solid">
+      This is a map showing the percentage of women at a top managerial positons in firms. A top managerial position refers 
+      to the highest ranking manager or the CEO of a company. This is a good indicator of the success of women in different countries
+      when compared with maps of the education completion level of both genders there is a trend of women getting more top 
+      ranking positons and with the general education level of women in that same country. 
+    </p>
+
+  </div>
+
   <script>
-  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+
   var dropdown = document.getElementsByClassName("dropdown-btn");
   var i;
   
@@ -52,6 +100,19 @@
     }
     });
   }
+  </script>
+
+  <script>
+    function dark_toggle(){
+    var element = document.body;
+    element.classList.toggle("dark_mode");
+  }
+  </script>
+
+  <script>
+    function search(){
+      
+    }
   </script>
 
 </body>

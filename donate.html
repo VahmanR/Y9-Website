@@ -1,27 +1,100 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <link rel = "stylesheet"
-      type = "text/css"
-      href = "style.css" />
-  </head>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
 <body>
+ 
 
-<h1>
-  Goal 4 and 5
-</h1>   
+<div class="header" style="align-content: center;">
+
+  <button type="submit"><img src="tinysearch.png"><i class="fa fa-search"></i></button>
+
+  <div class="search_box">
+
+    <input type="text" placeholder="Search..." style="float: right; margin-bottom:10px">  
+
+  </div> 
+
+  <div class="dark_button">
+
+    <button onClick="dark_toggle()" style="background-color:#380955">
+
+      <img src="dark_toggle.jpg">
+
+    </button>
+
+  </div>
+
+</div>
+
+<h1 class="solid">Donate</h1>
+  
+
+<p class="solid">
+  <a href="https://www.equalitynow.org/donate/">EqualityNow</a>
+</br>
+  <a href="https://equalityfund.ca/">Equality Fund</a>
+</br>
+  <a href="https://donate.worldvision.ca/products/child-education-fu">Word Vision Education Fund</a>
+</br>
+  <a href="https://shop.unicef.ca/education">UNICEF Education</a>
+</p>
 
 
+  <div class="sidenav">
+    <a href="index.html">Home</a>
+    <button class="dropdown-btn">Goal 4 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="goal4.html">What is Goal 4?</a>
+      <a href="goal4_2.html">Graphs and Data</a>
+    </div>
+    <button class="dropdown-btn">Goal 5
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="goal5.html">What is Goal 5?</a>
+      <a href="goal5_2.html">Graphs and Data</a>
+    </div>
+    <a href="donate.html">Donate</a>
+  </div>
+  
 
-<button type="submit"><img src="tinysearch.png"><i class="fa fa-search"></i></button>
-<input type="text" placeholder="Search.." style="float: right;">
+  <script>
 
-<ul>
-  <li><a class="active" href="index.html">Home</a></li>
-  <li><a href="goal4.html">Goal 4</a></li>
-  <li><a href="goal5.html">Goal 5</a></li>
-  <li><a href="donate.html">Donate</a></li>
-</ul>
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+  </script>
+
+  <script>
+    function dark_toggle(){
+    var element = document.body;
+    element.classList.toggle("dark_mode");
+  }
+  </script>
+
+  <script>
+    function search(){
+      
+    }
+  </script>
 
 </body>
+
 </html>
